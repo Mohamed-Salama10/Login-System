@@ -1,24 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login System</title>
-    <link rel="stylesheet" href="./css/all.min.css">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="position-relative vh-100">
+      <div class="w-100 h-100 overflow-hidden d-flex">
+        <div
+          class="first-trapz d-flex align-items-center justify-content-center"
+        >
+          <div class="content bg-white w-50 text-center p-3">
+            <h3 class="login-title" onclick="createNewUser()">login</h3>
+            <hr />
 
+            <div>
+              <div class="input-group input-group-lg">
+                <span
+                  class="input-group-text bg-primary"
+                  id="inputGroup-sizing-lg"
+                  ><i class="fa-solid fa-user text-white"></i
+                ></span>
+                <input
+                  placeholder="Username"
+                  type="text"
+                  class="form-control"
+                  aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-lg"
+                  id="nameInput"
+                />
+              </div>
 
+              <div id="userNameWarningMsg"></div>
 
+              <div class="input-group input-group-lg mt-3">
+                <span
+                  class="input-group-text bg-primary"
+                  id="inputGroup-sizing-lg"
+                  ><i class="fa-solid fa-envelope text-white"></i
+                ></span>
+                <input
+                  placeholder="Email@user.com"
+                  type="text"
+                  class="form-control"
+                  aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-lg"
+                  id="emailInput"
+                />
+              </div>
+              <div id="emailWarningMsg"></div>
 
+              <div class="input-group input-group-lg mt-3">
+                <span
+                  class="input-group-text bg-primary"
+                  id="inputGroup-sizing-lg"
+                  ><i class="fa-solid fa-lock text-white"></i
+                ></span>
+                <input
+                  placeholder="Password"
+                  type="text"
+                  class="form-control"
+                  aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-lg"
+                  id="passwordInput"
+                />
+              </div>
+              <div id="passwordWarningMsg"></div>
 
+              <button
+                type="button"
+                class="btn btn-primary w-100 mt-5"
+                onclick="createNewUser()"
+              >
+                Login
+              </button>
+            </div>
+          </div>
+        </div>
 
-</head>
-<body>
+        <div class="sec-trapz d-flex align-content-center jus"></div>
+      </div>
+    </header>
 
-
- <script src="./js/bootstrap.bundle.min.js"></script>
- <script src="./js/script.js"></script>   
-</body>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
 </html>

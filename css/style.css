@@ -1,0 +1,12 @@
+.first-trapz {
+  width: 50%;
+  height: 100%;
+  background-color: #465165;
+}
+
+.sec-trapz {
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+  background-color: #384454;
+}
