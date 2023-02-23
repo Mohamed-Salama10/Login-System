@@ -1,6 +1,7 @@
 var nameInput = document.getElementById("nameInput");
 var passwordInput = document.getElementById("passwordInput");
 var emailInput = document.getElementById("emailInput");
+var loginDiv = document.getElementById("loginSuccess")
 
 var allUsers = [];
 
@@ -44,13 +45,28 @@ function checkWarning() {
   return flag;
 }
 
+function displayLoginSuccess(){
+
+loginDiv.innerHTML = `<div
+class="bg-success rounded-2 text-center text-white mt-2 text-center m-auto"
+id="loginSuccess"
+>
+Login success
+</div>`
+
+}
+
 function createNewUser() {
-  if (checkWarning() == false  && validation() ==true ) {
+  if (checkWarning() == false && validation() == true) {
     user = {
       name: nameInput.value,
       password: passwordInput.value,
     };
 
+
+
+
+    displayLoginSuccess()
     allUsers.push(user);
     localStorage.setItem("users", JSON.stringify(allUsers));
   }
@@ -79,7 +95,7 @@ function validation() {
     passwordWarningMsg.innerHTML = `<div class="bg-danger rounded-2 text-center text-white mt-2">
     password invalid
   </div>`;
-    console.log("dasdsadsadsadasd")
+    console.log("dasdsadsadsadasd");
     flag = false;
   }
 
@@ -98,7 +114,7 @@ function emailValidation(email) {
 
 function passwordValidation(password) {
   var nameValidation =
-  /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/gm;
+    /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/gm;
   return nameValidation.test(password);
 }
 
